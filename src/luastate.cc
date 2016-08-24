@@ -55,7 +55,7 @@ void LuaState::New(const FunctionCallbackInfo<Value>& args) {
 
     LuaState* obj = new LuaState();
     obj->name_ = get_lua_str(args[0]);
-    obj->lua_ = lua_open();
+    obj->lua_ = luaL_newstate();
     luaL_openlibs(obj->lua_);
     obj->Wrap(args.This());
 

@@ -7,7 +7,7 @@
             "include"
         ],
         "libraries": [
-            "lib/liblua.a"
+            "../lib/liblua53.a",
         ],
         "sources": [
             "src/values.cc",
